@@ -14,5 +14,5 @@ def extract_information(pdf_path):
         print(page_content)
 
 if __name__ == '__main__':
-    path = '/root/menyparse/meny.pdf'
+    path = '/PATH/TO/FILE.pdf'
     extract_information(path)
