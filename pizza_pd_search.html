@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}Pizza Selection{% endblock %}
+{% block content %}
+<table>
+    <tr>
+        {% for col in column_names %}
+        <th>{{col}}</th>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

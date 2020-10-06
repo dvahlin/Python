@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<title>Pizza</title>
+<div class=page>
+  <h1>Pizza</h1>
+  <p>För lista på samtliga pizzor klicka <a href="/list">här</a></p>
+	
+  <h2>Prisklasser</h2>
+<form method ="post" action="/">
+  <button type="TYPE1" name="TYPE1" value="TYPE1"> Prisklass 1 </button>
+  <button type="TYPE2" name="TYPE2" value="TYPE2"> Prisklass 2 </button>
+  <button type="TYPE3" name="TYPE3" value="TYPE3"> Prisklass 3 </button>
+  <button type="TYPE4" name="TYPE4" value="TYPE4"> Prisklass 4 </button>
+  <button type="TYPE5" name="TYPE5" value="TYPE5"> Prisklass 5 </button>
+</form>
+  <h2>Typer</h2>
+<form method ="post" action="/">
+  <button type="TYPE6" name="TYPE6" value="TYPE6"> Mexikanska Pizzor </button>
+  <button type="TYPE7" name="TYPE7" value="TYPE7"> Inbakade Pizzor </button>
+  <button type="TYPE8" name="TYPE8" value="TYPE8"> Halvinbakade Pizzor </button>
+  <button type="TYPE9" name="TYPE9" value="TYPE9"> Kebab Pizzor </button>
+  <button type="TYPE10" name="TYPE10" value="TYPE10"> Pepperoni Pizzor </button>
+</form> 
+
+ <h2>Innehåll på Pizza</h2>
+<form method ="post" action="/">
+  <button type="CONTENT1" name="CONTENT1" value="CONTENT1"> Ananas </button>
+  <button type="CONTENT2" name="CONTENT2" value="CONTENT2"> Banan </button>
+  <button type="CONTENT3" name="CONTENT3" value="CONTENT3"> Kyckling </button>
+  <button type="CONTENT4" name="CONTENT4" value="CONTENT4"> Mozzarella </button>
+  <button type="CONTENT5" name="CONTENT5" value="CONTENT5"> Parmaskinka </button>
+</form>
+</div>
+{% endblock %}

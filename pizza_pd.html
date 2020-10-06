@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<title>Pizza</title>
+<div class=page>
+  <h1>Pizza</h1>
+    <h2>{{df[index]}}</h2>
+    {{ df|safe }}
+<button onclick="addToCart({{ df }})" type="button" class="btn btn-primary">Add to Cart</button>
+</div>
+{% endblock %}
