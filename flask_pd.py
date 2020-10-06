@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, send_from_directory
 from flask import render_template, request
 from flask_bootstrap import Bootstrap
 import pandas as pd
@@ -55,6 +55,12 @@ def add_to_cart(product_id):
 	df.result = df.query.filter(product)
 	print(df.result)
 
+@app.route('/js/<path:path>')
+def send_js(path):
+	return send_from_directory('js', path)
+@app.route('/css/<path:path>')
+def send_css(path):
+	return send_from_directory('css', path)
 
 if __name__ == "__main__":
 	app.run(debug=True)

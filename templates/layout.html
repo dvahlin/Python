@@ -1,9 +1,40 @@
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 		<title>Pizza - {% block title %}{% endblock %}</title>
-		<link rel="stylesheet" href="/static/main.css"/>
+		<link rel="stylesheet" href="/css/bootstrap.css"/>
+		<script src="/js/jquery-3.5.1.slim.min.js"></script>
+		<script src="/js/popper.min.js"></script>
+		<script src="/js/bootstrap.js"></script>
 		<style type="text/css">
+			body, html {
+				display: flex;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				width: 100%;
+				height: 100%;
+
+				flex-direction: row;
+			}
+
+			.basket {
+				width: 200px;
+				background-color: #222;
+				color: #FFFFFF;
+			}
+
+			.content {
+				padding-left: 10px;
+			}
+
+			.searchbox {
+				width: 240px;
+				margin-left: 10px;
+			}
 
 			/* Order of .searchbox and .autohider is important
 			   both in the HTML and the CSS, because the
@@ -26,10 +57,16 @@
 		</style>
 	</head>
 	<body>
-		{% block content %}{% endblock %}
+		<div class="basket">
+			<h3>Current basket</h3>
+		</div>
+		<div class="content">
+			{% block content %}{% endblock %}
 
-		<footer>
-			<small>&copy; 2020</small>
-		</footer>
+			<footer>
+				<small>&copy; 2020</small>
+			</footer>
+		</div>
+
 	</body>
 </html>
