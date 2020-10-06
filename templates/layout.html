@@ -1,0 +1,35 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Pizza - {% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="/static/main.css"/>
+		<style type="text/css">
+
+			/* Order of .searchbox and .autohider is important
+			   both in the HTML and the CSS, because the
+			   magical + sign doesn't work unless the objects
+			   are placed in this (.searchbox -> .autohider) order */
+			.searchbox:not(:placeholder-shown) + .autohider {
+				visibility: hidden;
+			}
+
+			.searchbox:placeholder-shown + .autohider {
+				visibility: visible;
+			}
+
+			.ingredients {
+				display: flex;
+				flex-direction: row-reverse; /* Reverse the content order of input and buttons */
+				justify-content: flex-end; /* But place the content at the beginning of the page, which now is the end of the box */
+			}
+
+		</style>
+	</head>
+	<body>
+		{% block content %}{% endblock %}
+
+		<footer>
+			<small>&copy; 2020</small>
+		</footer>
+	</body>
+</html>
