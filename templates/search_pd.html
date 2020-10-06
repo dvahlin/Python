@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<title>Pizza</title>
+<div class=page>
+	<h1>Pizza</h1>
+	<p>För lista på samtliga pizzor klicka <a href="/list">här</a></p>
+	
+	<h2>Prisklasser</h2>
+	<form method ="post" action="/">
+		<button name="type" class="btn btn-info" value="1"> Prisklass 1 </button>
+		<button name="type" class="btn btn-info" value="2"> Prisklass 2 </button>
+		<button name="type" class="btn btn-info" value="3"> Prisklass 3 </button>
+		<button name="type" class="btn btn-info" value="4"> Prisklass 4 </button>
+		<button name="type" class="btn btn-info" value="5"> Prisklass 5 </button>
+	</form>
+
+	<h2>Typer</h2>
+	<form method ="post" action="/">
+		<button name="type" class="btn btn-secondary" value="Mexikanska"> Mexikanska Pizzor </button>
+		<button name="type" class="btn btn-secondary" value="Inbakade"> Inbakade Pizzor </button>
+		<button name="type" class="btn btn-secondary" value="Halv"> Halvinbakade Pizzor </button>
+		<button name="type" class="btn btn-secondary" value="Kebab"> Kebab Pizzor </button>
+		<button name="type" class="btn btn-secondary" value="Pepper"> Pepperoni Pizzor </button>
+	</form> 
+
+	<h2>Innehåll på Pizza</h2>
+	<form method ="post" action="/">
+		<div class="ingredients">
+			<input class="searchbox form-control" type="text" placeholder="Sök på valfritt innehåll" name="fritext">
+			<div class="autohider">
+				<button class="btn btn-primary" name="ingredient" value="Ananas"> Ananas </button>
+				<button class="btn btn-primary" name="ingredient" value="Banan"> Banan </button>
+				<button class="btn btn-primary" name="ingredient" value="Kyckling"> Kyckling </button>
+				<button class="btn btn-primary" name="ingredient" value="Mozzarella"> Mozzarella </button>
+				<button class="btn btn-primary" name="ingredient" value="Parmaskinka"> Parmaskinka </button>
+			</div>
+		</div>
+	</form>
+</div>
+{% endblock %}
